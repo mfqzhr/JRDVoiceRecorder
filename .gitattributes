@@ -1,0 +1,3 @@
+*.kt linguist-language=Java
+*.cpp linguist-language=A
+*.h linguist-language=Java

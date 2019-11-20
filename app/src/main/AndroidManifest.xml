@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tyjradio.jrdvoicerecorder">
+    <!-- 添加开机启动所需要的权限 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" /> <!-- 添加录音权限 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" /> <!-- 写入文件的权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 读取文件的权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- internet权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission  android:name = "android.permission.GET_TASKS"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- 启屏页面 -->
+        <activity android:name=".SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- 首页 -->
+
+        <activity android:name=".MainActivity" /> <!-- 播放页面 -->
+        <activity android:name=".PlayActivity" /> <!-- 设置页面 -->
+        <activity android:name=".SettingActivity" /> <!-- 详情页面 -->
+        <activity android:name=".DetailActivity" /> <!-- 搜索页面 -->
+        <activity android:name=".InfoActivity" />
+        <activity
+            android:name=".SearchActivity"
+            android:windowSoftInputMode="stateHidden|stateUnchanged" /> <!-- Servive scope -->
+
+        <!-- Socket通信的Service -->
+        <service
+            android:name=".ConUsb.ConnService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".recorder.VoiceRecorderService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.tyjradio.jrdvoicerecorder.recorderService" />
+            </intent-filter>
+        </service> <!-- end of service scope -->
+        <!-- receiver -->
+        <!-- 启动ConnService的广播 -->
+        <receiver
+            android:name=".ConUsb.StartConnReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.JRDBroadcastReceiver.StartConnectionAction" />
+            </intent-filter>
+        </receiver> <!-- 启动录音服务的广播 -->
+        <receiver
+            android:name=".recorder.BootReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter android:priority="2147483647">
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver> <!-- USB 插拔的广播 -->
+        <receiver
+            android:name=".ConUsb.UsbStateReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter android:priority="1000">
+                <action android:name="android.hardware.usb.action.USB_STATE" />
+            </intent-filter>
+        </receiver> <!-- 关机的广播 -->
+        <receiver android:name=".recorder.ShutdownBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_SHUTDOWN" />
+
+                <category android:name="android.intent.category.HOME" />
+            </intent-filter>
+        </receiver> <!-- 手动改变设置的时间广播 -->
+        <receiver android:name=".TimeChangedReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.TIME_SET" />
+                <action android:name="android.intent.action.TIME_TICK" />
+            </intent-filter>
+        </receiver> <!-- provider -->
+        <provider
+            android:name=".db.DBContentProvider"
+            android:authorities="com.tyjradio.provider"
+            android:enabled="true"
+            android:exported="true" />
+    </application>
+
+</manifest>

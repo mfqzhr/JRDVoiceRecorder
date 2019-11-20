@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_bg"
+        android:layout_marginTop="12dp">
+    </View>
+
+    <!--区号-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_height="40dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="区号"
+            android:layout_centerVertical="true"
+            android:textColor="#FF000000"
+            android:textSize="16dp"
+            />
+
+        <TextView
+            android:id="@+id/ZipCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:layout_centerVertical="true"
+            android:text="南山分局"
+            android:textColor="#FF7F7F7F"
+            android:textSize="16dp"
+            />
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/line_bg"></View>
+
+    <!--信道号-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_height="40dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="信道号"
+            android:layout_centerVertical="true"
+            android:textColor="#FF000000"
+            android:textSize="16dp"
+            />
+
+        <TextView
+            android:id="@+id/ChannelCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:layout_centerVertical="true"
+            android:text="CD 01"
+            android:textColor="#FF7F7F7F"
+            android:textSize="16dp"
+            />
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/line_bg"></View>
+
+
+    <!--信道类型-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_height="40dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="信道类型"
+            android:layout_centerVertical="true"
+            android:textColor="#FF000000"
+            android:textSize="16dp"
+            />
+
+        <TextView
+            android:id="@+id/ChannelType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:text="窄带对讲/组呼"
+            android:textColor="#FF7F7F7F"
+            android:textSize="16dp" />
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/line_bg"></View>
+
+
+
+    <!--通话类型-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_height="40dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="通话类型"
+            android:layout_centerVertical="true"
+            android:textColor="#FF000000"
+            android:textSize="16dp"
+            />
+
+        <TextView
+            android:id="@+id/RecorderType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:text="数字信道"
+            android:textColor="#FF7F7F7F"
+            android:textSize="16dp" />
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/line_bg"></View>
+
+
+    <!--发射频率-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_height="40dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发射频率"
+            android:layout_centerVertical="true"
+            android:textColor="#FF000000"
+            android:textSize="16dp"
+            />
+
+        <TextView
+            android:id="@+id/EmFrequency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:layout_centerVertical="true"
+            android:text="123HZ"
+            android:textColor="#FF7F7F7F"
+            android:textSize="16dp"
+            />
+
+    </RelativeLayout>
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/line_bg"></View>
+
+
+    <!--接收频率-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_height="40dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="接收频率"
+            android:layout_centerVertical="true"
+            android:textColor="#FF000000"
+            android:textSize="16dp"
+            />
+
+        <TextView
+            android:id="@+id/REFrequency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:text="123HZ"
+            android:textColor="#FF7F7F7F"
+            android:textSize="16dp" />
+
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_bg"></View>
+
+</LinearLayout>

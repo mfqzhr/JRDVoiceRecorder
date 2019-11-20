@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/id_main"
+    android:background="@color/main_bg"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!--顶部标题栏-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:orientation="horizontal"
+        android:id="@+id/id_ll_title"
+        android:gravity="center_vertical"
+        android:background="@color/main_color"
+        >
+
+        <TextView
+            android:id="@+id/id_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="全部录音"
+            android:textColor="#FFFFFFFF"
+            android:textSize="16dp" />
+
+        <RelativeLayout
+            android:layout_width="40dp"
+            android:id="@+id/id_open_pop"
+            android:layout_height="40dp">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="18dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/jt_bottom" />
+        </RelativeLayout>
+
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"></View>
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/id_search_iv"
+            android:layout_height="20dp"
+            android:layout_marginRight="25dp"
+            android:src="@drawable/search"/>
+        <!--更多-->
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/id_more_iv"
+            android:layout_height="20dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/more"/>
+
+    </LinearLayout>
+
+    <!--音频的列表-->
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scrollbars="none"
+        android:id="@+id/id_audio_list_view"
+        android:layout_weight="1"></ListView>
+
+    <!--底部播放的列表-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:id="@+id/id_bottom_play_ll"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_marginLeft="16dp"
+            android:gravity="center_vertical"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <!--文件名字-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/id_play_name"
+                android:layout_height="wrap_content"
+                android:textColor="#FF000000"
+                android:textSize="18dp"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="6dp"
+                android:gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/id_now_time"
+                    android:layout_height="wrap_content"
+                    android:text="00:00"
+                    android:textColor="#FF9C9C9C"
+                    android:textSize="12dp"
+                    />
+                <ProgressBar
+                    android:layout_width="165dp"
+                    android:layout_height="8dp"
+                    android:id="@+id/id_progress"
+                    android:progressDrawable="@drawable/pro_bg"
+                    android:progress="0"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_margin="5dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/id_total_time"
+                    android:text="00:00"
+                    android:textColor="#FF9C9C9C"
+                    android:textSize="12dp"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--开始按钮-->
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/id_main_stop"
+            android:src="@drawable/main_play_stop"
+            android:layout_marginRight="16dp"/>
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/id_main_on"
+            android:visibility="gone"
+            android:src="@drawable/main_play_on"
+            android:layout_marginRight="16dp"/>
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

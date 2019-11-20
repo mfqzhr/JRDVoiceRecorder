@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="16dp"
+        android:orientation="horizontal">
+
+        <!--音频信息-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:gravity="center_vertical"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="200dp"
+                android:id="@+id/id_tv_name"
+                android:layout_height="wrap_content"
+                android:text="PDC20190514092301"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textColor="#FF444444"
+                android:textSize="18dp"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/id_year"
+                    android:text="2019/5/14"
+                    android:textColor="#FF9C9C9C"
+                    android:textSize="14dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00:00:20"
+                    android:id="@+id/id_time"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="#FF9C9C9C"
+                    android:textSize="14dp"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--播放动画-->
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_marginRight="55dp"
+            android:id="@+id/id_play_ani_iv"
+            android:layout_height="25dp"
+            android:visibility="gone"/>
+
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:id="@+id/id_info_iv"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/main_info"/>
+
+    </LinearLayout>
+
+</LinearLayout>

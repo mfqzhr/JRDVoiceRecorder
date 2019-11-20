@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/main_bg"
+    android:layout_height="match_parent">
+    <!--标题栏-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:background="@color/main_color">
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="23dp"
+            android:id="@+id/id_back_iv"
+            android:layout_marginLeft="16dp"
+            android:src="@drawable/back"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginRight="6dp"
+            android:layout_marginLeft="13dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_marginRight="16dp"
+                android:background="@null"
+                android:id="@+id/id_et_name"
+                android:layout_marginLeft="13dp"
+                android:textSize="16dp"
+                android:textCursorDrawable="@drawable/hint_color"
+                android:hint="输入搜索内容"
+                android:textColorHint="#c9c9c9"
+                android:textColor="#666666"
+                android:layout_height="wrap_content"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="6dp"
+                android:background="#c9c9c9">
+
+            </View>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="16dp"
+            android:textSize="18dp"
+            android:id="@+id/id_search_tv"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:text="搜索"/>
+
+    </LinearLayout>
+    <!--最近搜索-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginLeft="16dp"
+        android:visibility="gone"
+        android:id="@+id/id_search_history_ll"
+        android:layout_marginRight="16dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="最近搜索"
+            android:textColor="#FF9C9C9C"
+            android:textSize="14dp"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_bg"
+            android:layout_marginTop="12dp">
+        </View>
+
+        <!--搜索记录-->
+        <GridView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/id_history_gv"
+            android:numColumns="2">
+        </GridView>
+
+
+    </LinearLayout>
+
+    <!--搜索结果的列表-->
+    <ListView
+        android:layout_width="match_parent"
+        android:id="@+id/id_search_listview"
+        android:layout_height="match_parent">
+    </ListView>
+
+
+</LinearLayout>

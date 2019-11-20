@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical">
+
+    <!--标题栏-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:gravity="center_vertical"
+        android:background="@color/main_color"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="16dp"
+            android:id="@+id/id_back_iv"
+            android:layout_height="23dp"
+            android:layout_marginLeft="16dp"
+            android:src="@drawable/back"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/id_title_tv"
+            android:layout_height="wrap_content"
+            android:text="PDC20190514092301"
+            android:layout_marginLeft="13dp"
+            android:textColor="#FFFFFFFF"
+            android:textSize="17dp"
+            />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:visibility="gone"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/play_info"
+            />
+
+    </LinearLayout>
+
+    <!--时间-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="12dp"
+            android:text="00:00"
+            android:id="@+id/id_now_time_tv"
+            android:textColor="#FF7F7F7F"
+            android:textSize="16dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:id="@+id/id_total_time_tv"
+            android:layout_marginTop="12dp"
+            android:layout_alignParentRight="true"
+            android:text="00:00"
+            android:textColor="#FF7F7F7F"
+            android:textSize="16dp"
+            />
+    </RelativeLayout>
+
+
+    
+    
+    <!--音轨控件-->
+    <com.tyjradio.jrdvoicerecorder.view.WaveformView
+        android:layout_width="match_parent"
+        android:id="@+id/wave_form_view"
+        android:layout_height="250dp"
+        android:layout_marginTop="40dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"></View>
+
+
+    <!--播放控制-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginBottom="20dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:id="@+id/id_before_iv"
+            android:layout_marginLeft="60dp"
+            android:src="@drawable/play_left"/>
+
+        <ImageView
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:id="@+id/id_play_stop_iv"
+            android:layout_height="wrap_content"
+            android:src="@drawable/play_stop"/>
+
+
+        <ImageView
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:id="@+id/id_play_on_iv"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:src="@drawable/paly_on"/>
+
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/id_after_iv"
+            android:layout_marginRight="60dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/play_right"/>
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+</LinearLayout>

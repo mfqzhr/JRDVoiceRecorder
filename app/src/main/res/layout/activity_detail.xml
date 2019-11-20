@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical">
+    <!--顶部的标题栏-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:gravity="center_vertical"
+        android:background="@color/main_color"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="23dp"
+            android:id="@+id/id_back_iv"
+            android:layout_marginLeft="16dp"
+            android:src="@drawable/back"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/id_title_tv"
+            android:layout_height="wrap_content"
+            android:text="PDC20190514092301"
+            android:layout_marginLeft="13dp"
+            android:textColor="#FFFFFFFF"
+            android:textSize="17dp"
+            />
+
+    </LinearLayout>
+
+
+        <!--信息列表-->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="基本信息"
+                    android:layout_marginLeft="16dp"
+                    android:textColor="#FF7F7F7F"
+                    android:textSize="14dp"
+                    android:layout_marginTop="12dp"
+                    />
+                <!--基本信息-->
+                <include
+                    layout="@layout/info_layout"></include>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="通话信息"
+                    android:layout_marginLeft="16dp"
+                    android:textColor="#FF7F7F7F"
+                    android:textSize="14dp"
+                    android:layout_marginTop="12dp"
+                    />
+
+                <include
+                    layout="@layout/phone_info_layout"></include>
+
+            </LinearLayout>
+        </ScrollView>
+
+
+
+        <!--播放的条目-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/id_play_ll"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_alignParentBottom="true">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/main_play_stop"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="播放"
+                android:textColor="#FF0089B5"
+                android:layout_marginLeft="8dp"
+                android:textSize="18dp"
+                />
+
+        </LinearLayout>
+
+
+
+
+
+
+</LinearLayout>
